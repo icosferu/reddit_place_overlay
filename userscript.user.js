@@ -7,7 +7,7 @@
 // @match        https://hot-potato.reddit.com/embed*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
 // @run-at       document-start
-// @grant        none
+// @grant        GM_addStyle
 // ==/UserScript==
 if (window.top !== window.self) {
 
@@ -130,6 +130,7 @@ if (window.top !== window.self) {
 
         function initSlider () {
             let visSlider = document.createElement("div");
+            visSlider.id = 'visSlider';
 
             visSlider.style = `
                      position: fixed;
@@ -143,6 +144,14 @@ if (window.top !== window.self) {
                      text-shadow: black 1px 0 10px;
                      text-align:center;
                 `;
+
+            console.log(innerWidth);
+
+            if (innerWidth < 900) {
+                visSlider.style.setProperty('top', 'calc(var(--sait) + 48px)');
+                visSlider.style.right = 0;
+                visSlider.style.left = 0;
+            }
 
             function from_html (htmlString) {
                 var div = document.createElement('div');
