@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         r/place overlay template
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  eh
 // @author       oralekin, LittleEndu, ekgame, Wieku, DeadRote, violet-ta
 // @match        https://hot-potato.reddit.com/embed*
@@ -205,12 +205,11 @@ if (window.top !== window.self) {
 
     }, false);
 
+    
+    // Add your template below, the first ones take precedence in case of conflict
     // 2000x2000 images without spaces between pixels work too ^_^
     
     const sources = [
         "https://raw.githubusercontent.com/sssata/canada_place_template/main/template.png", //canada flag
-        //"https://cdn.discordapp.com/attachments/960267990551625789/960533181210169374/Beznazwyoverlay.png",   //center alliance
-        //"https://raw.githubusercontent.com/BSBMteam/r-place-GreatWave/main/dotted-place-template-GreatWave-StarWars-GME-OSU-and-More.png",  // the great wave
-
                     ];
 }
