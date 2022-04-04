@@ -205,6 +205,8 @@ if (window.top !== window.self) {
 
     }, false);
 
+    // 2000x2000 images without spaces between pixels work too ^_^
+    
     const sources = [
         "https://raw.githubusercontent.com/sssata/canada_place_template/main/template.png", //canada flag
         //"https://cdn.discordapp.com/attachments/960267990551625789/960533181210169374/Beznazwyoverlay.png",   //center alliance
